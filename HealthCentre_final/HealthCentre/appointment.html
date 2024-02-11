@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkup</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+    body {
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    #object1:hover{
+        transform: scale(1.05);
+    }
+    #object2:hover{
+        transform: scale(1.05);
+    }
+   #book{
+    float: left;
+        width: 60%;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+   }
+   #special{
+    float: left;
+        width: 60%;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-top:10px;
+        margin-bottom:10px;
+   }
+   
+   
+
+.show {
+  display: block;
+}
+    header {
+        background-color: #343a40;
+        color: #ffffff;
+        padding: 20px 0;
+        border-bottom: 5px solid #159957;
+        text-align: center;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: 600;
+    }
+    header nav {
+        margin-top: 20px;
+    }
+    header nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    header nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+    header nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    header nav ul li a:hover {
+        color: #cccccc;
+        font-weight: bold;
+    }
+    #main {
+        float: left;
+        width: 60%;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    #sidebar {
+        float:right;
+        width: 25%;
+        padding: 20px;
+        background-color: #343a40;
+        color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    #sidebar h3 {
+        margin-top: 10;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    #sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    #sidebar ul li {
+        margin-bottom: 10px;
+    }
+    #sidebar ul li:last-child {
+        margin-bottom: 0;
+    }
+    #sidebar ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    #sidebar ul li a:hover {
+        color: #cccccc;
+    }
+    footer {
+        clear: both;
+        background-color: #343a40;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+        border-top: 5px solid #159957;
+    }
+    footer p {
+        margin: 0;
+    }
+    #object1 {
+            width: 450px;
+            height: 300px;
+            float: right;
+            position:fixed;
+            transition:0.75s;
+        }
+        #object2 {
+            width: 900px;
+            height: 300px;
+            float: right;
+            transition:0.75s;
+        }
+   #servicesDropdown {
+        position: relative;
+    }
+    #dropdownContent {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #343a40;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: left
+    }
+    #servicesDropdown:hover #dropdownContent {
+        display: block;
+    }
+    #dropdownContent li {
+        margin-bottom: 5px;
+    }
+    #dropdownContent li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    #dropdownContent li a:hover {
+        color: #cccccc;
+    }
+    label {
+      font-weight: bold;
+      color: #666; /* Medium grey text color */
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+    input[type="submit"] {
+      width: 100%;
+      background-color: #4CAF50; /* Green submit button */
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #45a049; /* Darker green on hover */
+    }
+    .appointment-slot {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .appointment-slot label {
+      font-weight: bold;
+      color: #666; /* Medium grey text color */
+    }
+
+    .appointment-slot select {
+      width: 60%;
+      padding: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-sizing: border-box;
+    }
+
+ 
+</style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Health Centre</h1>
+        <nav>
+            <ul>
+                <li class="current"><a href="health.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li id="servicesDropdown"><a href="#">Services</a>
+                    <ul id="dropdownContent">
+                        <li><a href="appointment.html">Appointment</a></li>
+                        <li><a href="pet.html">Pet care</a></li>
+                        <li><a href="#">Apply</a></li>
+                    </ul>
+                </li>
+                
+                
+            </ul>
+        </nav>
+    </header>
+    
+<div id="book">
+    <h1>Book an Appointment</h1>
+    <p>In order to save time waiting for you turn, book a slot and get an appointment with your doctor within minutes!Choose the field of specialization and get information about our specialist doctors right away. </p>
+</div>
+<img id="object1" src=
+"Logo.png" />
+
+<div id="special">
+    <h2>Choose specialization</h2>
+    <select id="firstDropdown" onchange="populateSecondDropdown()" >
+        <option value="">Select Option</option>
+        <option value="dentist">Dentist</option>
+        <option value="orthopadic">Orthopadic</option>
+        <option value="gyane">Gyane</option>
+        <option value="medicine">Medicine</option>
+        <option value="prosthodontist">Prosthodontist</option>
+        
+      
+        <option value="physiotherapist">Physiotherapist</option>
+    </select>
+    <h2>Doctors Available</h2>
+    <!-- Second Dropdown -->
+    <select id="secondDropdown">
+        <option value="">Select Option</option>
+
+        <!-- Options will be populated dynamically based on the choice in the first dropdown -->
+
+    </select>
+    <form id="appointmentForm">
+        <input type="submit" value="Book Appointment">
+    </form>
+    
+    </select>
+    
+    <script>
+    function populateSecondDropdown() {
+        // Get the selected value from the first dropdown
+        const firstDropdown = document.getElementById('firstDropdown');
+        const selectedOption = firstDropdown.value;
+    
+        // Get the second dropdown
+        const secondDropdown = document.getElementById('secondDropdown');
+    
+        // Clear existing options in the second dropdown
+        secondDropdown.innerHTML = '';
+    
+        // Populate options in the second dropdown based on the selected option in the first dropdown
+        switch(selectedOption) {
+            case 'dentist':
+                addOptions(secondDropdown, [ "Dr. Tarush Paul"]);
+                break;
+            case 'orthopadic':
+                addOptions(secondDropdown, ["Dr. Navdeep Malhotra"]);
+                break;
+            case 'gyane':
+                addOptions(secondDropdown, ["Dr. Meena Sharma"]);
+                break;
+            case 'medicine':
+                addOptions(secondDropdown, [  "Dr. Manjul Sharma"]);
+                break;
+            case 'prosthodontist':
+                addOptions(secondDropdown, ["Dr. Sharad Vaidya"]);
+                break;
+            case 'physiotherapist':
+                addOptions(secondDropdown, ["Dr. Paras Sehgal"]);
+                break;
+            default:
+                secondDropdown.innerHTML = '<option value="">Select Option</option>';
+        }
+    }
+    
+    
+    
+    function addOptions(selectElement, optionsArray) {
+        // Add options to the select element
+        optionsArray.forEach(option => {
+            const optionElement = document.createElement('option');
+            optionElement.value = option;
+            optionElement.textContent = option;
+            selectElement.appendChild(optionElement);
+        });
+    }
+    </script>
+    
+
+
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkup</title>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+    body {
+        background-color: #f8f9fa;
+        margin: 0;
+        padding: 0;
+        font-family: 'Open Sans', sans-serif;
+    }
+    .container {
+        max-width: 1400px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+   
+
+.show {
+  display: block;
+}
+    header {
+        background-color: #343a40;
+        color: #ffffff;
+        padding: 20px 0;
+        border-bottom: 5px solid #159957;
+        text-align: center;
+    }
+    header h1 {
+        margin: 0;
+        font-size: 32px;
+        font-weight: 600;
+    }
+    header nav {
+        margin-top: 20px;
+    }
+    header nav ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    header nav ul li {
+        display: inline;
+        margin-right: 20px;
+    }
+    header nav ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    header nav ul li a:hover {
+        color: #cccccc;
+        font-weight: bold;
+    }
+    #main {
+        float: left;
+        width: 60%;
+        padding: 20px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    #sidebar {
+        position:relative;
+        width: 25%;
+        padding: 20px;
+        background-color: #343a40;
+        color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-top:400px;
+        margin-left:1000px;
+        transition:0.5s;
+    }
+    #sidebar:hover{
+        transform:scale(1.05);
+    }
+    #sidebar h3 {
+        margin-top: 10;
+        font-size: 24px;
+        font-weight: 600;
+    }
+    #sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 10px;
+    }
+    #sidebar ul li {
+        margin-bottom: 10px;
+    }
+    #sidebar ul li:last-child {
+        margin-bottom: 0;
+    }
+    #sidebar ul li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    #sidebar ul li a:hover {
+        color: #cccccc;
+    }
+    footer {
+        clear: both;
+        background-color: #343a40;
+        color: #ffffff;
+        text-align: center;
+        padding: 20px;
+        margin-top: 20px;
+        border-top: 5px solid #159957;
+        
+    }
+    footer p {
+        margin: 0;
+    }
+    #object1 {
+            width: 450px;
+            height: 300px;
+            float: right;
+            margin-top:10px;
+            transition: 0.75s;
+        }
+        #object2 {
+            width: 900px;
+            height: 300px;
+            float: right;
+            transition: 0.75s;
+        }
+    #object1:hover{
+        transform: scale(1.05);
+    }
+    #object2:hover{
+        transform: scale(1.05);
+    }
+   #servicesDropdown {
+        position: relative;
+    }
+    #dropdownContent {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #343a40;
+        padding: 10px;
+        border-radius: 5px;
+        text-align: left
+    }
+    #servicesDropdown:hover #dropdownContent {
+        display: block;
+    }
+    #dropdownContent li {
+        margin-bottom: 5px;
+    }
+    #dropdownContent li a {
+        color: #ffffff;
+        text-decoration: none;
+        font-size: 16px;
+        font-weight: 400;
+    }
+    #dropdownContent li a:hover {
+        color: #cccccc;
+    }
+ 
+</style>
+</head>
+<body>
+<div class="container">
+    <header>
+        <h1>Health Centre</h1>
+        <nav>
+            <ul>
+                <li class="current"><a href="health.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li id="servicesDropdown"><a href="#">Services</a>
+                    <ul id="dropdownContent">
+                        <li><a href="appointment.html">Appointment</a></li>
+                        <li><a href="pet.html">Pet care</a></li>
+                        <li><a href="#">Apply</a></li>
+                    </ul>
+                </li>
+                
+                
+            </ul>
+        </nav>
+    </header>
+    <div id="main">
+        <h1>Welcome to IIT Mandi's Health Centre</h1>
+        <p>IIT Mandi has two health centre situated at Kamand - South Campus and North Campus respectively. It is non dieted patient care unit which provide routine and emergency medical cover to all faculty, staff and student of kamand. It also provides first aid and emergency care to Mind Tree school students and worker /casual labour of the campus.. Here you will find information about our services and how we can help you.</p>
+        
+            <img id="object2" src=
+            "iitm_medicalunit.jpg" /></div>
+    
+    <img id="object1" src=
+"doc.jpg" />
+
+    <div id="sidebar">
+        
+        <h3>Get in Touch</h3>
+        
+        <ul>
+            <li>Phone: 555-555-5555</li>
+            <li>Email: <a href="mailto:info@checkup.com">info@checkup.com</a></li>
+        </ul>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Checkup</p>
+</footer>
+</body>
+</html>
